@@ -1,0 +1,20 @@
+---
+title: "my-vignette"
+format: html
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{quarto::html}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r}
+#| include: false
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(ROvis.table)
+```
