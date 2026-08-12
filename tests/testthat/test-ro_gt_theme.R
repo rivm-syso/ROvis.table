@@ -7,7 +7,6 @@ test_that("ro_gt_theme works and all styling choices are working", {
                     as_raw_html())
 })
 
-library(ROvis.utils)
 library(gt)
 
 gt_object_test <- mtcars |>
