@@ -22,7 +22,8 @@ Suggests:
     knitr (>= 1.50),
     rmarkdown (>= 2.30),
     testthat (>= 3.0.0)
-Remotes:    gitlab@gitlab.rivm.nl::spin/ROvis.utils@develop
+Remotes:     
+  git@github.com:rivm-syso/ROvis.utils.git
 VignetteBuilder: quarto
 Config/Roxygen2/markdown: TRUE
 Config/Roxygen2/version: 8.1.0
