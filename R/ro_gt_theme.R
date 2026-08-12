@@ -4,9 +4,12 @@
 #' `r ro_group_badge('gt')`
 #' This function implements a stylized theme for gt tables.
 #'
-#' @importFrom gt gt tab_options cols_align sub_missing opt_row_striping tab_style cells_title cell_text cells_column_labels cells_row_groups cells_body everything where px
+#' @importFrom gt gt tab_options cols_align sub_missing opt_row_striping tab_
+#' style cells_title cell_text cells_column_labels cells_row_groups cells_body
+#'  everything where px
 #' @importFrom systemfonts system_fonts
 #' @importFrom ROvis.utils ro_color
+#' @importFrom gt gt
 #'
 #' @param df  Dataframe.
 #' @param ROfont Default is FALSE, will change to TRUE for next major release (1.0.0).
@@ -27,7 +30,7 @@ ro_gt_theme <- function(df, ROfont = FALSE, ...) {
 
   if (
     ROfont &&
-      "RijksoverheidSansWebText" %in% systemfonts::system_fonts()$family
+      "RijksoverheidSansWebText" %in% system_fonts()$family
   ) {
     font <- "RijksoverheidSansWebText"
   } else {
