@@ -27,7 +27,7 @@
 #'   shinyApp(ui, server)
 #' }
 #'
-ro_dt_theme  <- function(
+ro_dt_theme <- function(
   base_family = "RijksoverheidSansWebText",
   sorting = FALSE
 ) {
