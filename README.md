@@ -1,7 +1,7 @@
 <!-- badges: start -->
-[![CI](https://img.shields.io/endpoint?url=https://rivm-syso.github.io/ROvis.theme/badges/ci.json)](https://github.com/rivm-syso/ROvis.theme/actions/workflows/ci.yaml)
-[![Lint](https://img.shields.io/endpoint?url=https://rivm-syso.github.io/ROvis.theme/badges/lint.json)](https://github.com/rivm-syso/ROvis.theme/actions/workflows/ci.yaml)
-[![Coverage](https://img.shields.io/endpoint?url=https://rivm-syso.github.io/ROvis.theme/badges/coverage.json)](https://github.com/rivm-syso/ROvis.theme/actions/workflows/ci.yaml)
+[![CI](https://img.shields.io/endpoint?url=https://rivm-syso.github.io/ROvis.table/badges/ci.json)](https://github.com/rivm-syso/ROvis.table/actions/workflows/ci.yaml)
+[![Lint](https://img.shields.io/endpoint?url=https://rivm-syso.github.io/ROvis.table/badges/lint.json)](https://github.com/rivm-syso/ROvis.table/actions/workflows/ci.yaml)
+[![Coverage](https://img.shields.io/endpoint?url=https://rivm-syso.github.io/ROvis.table/badges/coverage.json)](https://github.com/rivm-syso/ROvis.table/actions/workflows/ci.yaml)
 <!-- badges: end -->
 
 # ROvis.table
