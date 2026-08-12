@@ -7,8 +7,7 @@ test_that("ro_dt_table returns a datatable object", {
     col1 = c("A", "B", "C"),
     col2 = c(1, 2, 3)
   )
-  library(gt)
-  library(DT)
+
   result <- ro_dt_table(
     data = test_data,
     caption = "Test Table"
@@ -17,4 +16,3 @@ test_that("ro_dt_table returns a datatable object", {
   expect_s3_class(result, "datatables")
   expect_s3_class(result, "htmlwidget")
 })
-
