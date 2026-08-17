@@ -4,7 +4,7 @@
 [![Coverage](https://img.shields.io/endpoint?url=https://rivm-syso.github.io/ROvis.table/badges/coverage.json)](https://github.com/rivm-syso/ROvis.table/actions/workflows/ci.yaml)
 <!-- badges: end -->
 
-# ROvis.table
+# ROvis.table <a href="https://github.com/rivm-syso/ROvis.table"><img src="man/figures/logo.png" align="right" height="138" /></a>
 
 ## ROvis.table is an R package that provides a comprehensive suite of utilities for visualizing in Rijksoverheid style
 
