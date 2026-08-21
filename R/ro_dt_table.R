@@ -1,6 +1,7 @@
 #' datatable table to be used with DT
 #'
 #' @description
+#' `r ROvis.utils::ro_group_badge('DT')`
 #' Rendering an accessible, keyboard-navigable (with customJS) data table
 #' table with options for sorting and page length.
 #'

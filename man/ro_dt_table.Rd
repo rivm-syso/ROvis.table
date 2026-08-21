@@ -19,6 +19,7 @@ ro_dt_table(data, caption, sorting = FALSE, pagelength = 10)
 data table html
 }
 \description{
+\ifelse{html}{\figure{group-DT.svg}{options: alt='[DT]'}}{\strong{[DT]}}\cr\cr
 Rendering an accessible, keyboard-navigable (with customJS) data table
 table with options for sorting and page length.
 }
