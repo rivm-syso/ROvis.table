@@ -1,6 +1,7 @@
 #' Custom DT Table CSS Styling
 #'
 #' @description
+#' `r ROvis.utils::ro_group_badge('DT')`
 #' Returns a Shiny tags object containing custom CSS styles for DT tables,
 #' following preliminary RIVM huisstijl.
 #'

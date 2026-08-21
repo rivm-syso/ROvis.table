@@ -17,6 +17,7 @@ A \code{shiny.tags} object with a \code{<head>} tag containing
 custom CSS for DT tables.
 }
 \description{
+\ifelse{html}{\figure{group-DT.svg}{options: alt='[DT]'}}{\strong{[DT]}}\cr\cr
 Returns a Shiny tags object containing custom CSS styles for DT tables,
 following preliminary RIVM huisstijl.
 }
