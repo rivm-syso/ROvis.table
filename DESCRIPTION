@@ -1,6 +1,6 @@
 Package: ROvis.table
 Title: ROvis.table is an R package that provides a comprehensive suite of utilities for visualizing in Rijksoverheid style
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: person("spin@rivm.nl", email = "spin@rivm.nl", role = c("cre", "aut"))
 Description: Provides accessible, keyboard-navigable data tables and themed 
     visualizations using the gt and DT packages, with RIVM styling guidelines.
