@@ -1,0 +1,62 @@
+---
+title: "Getting Started with ROvis.table"
+format: html
+vignette: >
+  %\VignetteIndexEntry{Getting Started with ROvis.table}
+  %\VignetteEngine{quarto::html}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+ROvis.table provides two ways to build accessible, Rijksoverheid-styled tables:
+`ro_gt_theme()` for static `gt` tables, and `ro_dt_table()` (with `ro_dt_theme()`) for
+interactive, keyboard-navigable `DT` tables.
+
+```{r libraries, message=FALSE}
+library(ROvis.table)
+```
+
+## Static tables with gt
+
+Apply `ro_gt_theme()` to a `gt` table built from any data frame:
+
+```{r gt-example, eval=requireNamespace("gt", quietly = TRUE)}
+ro_gt_theme(head(mtcars, 5))
+```
+
+## Interactive tables with DT
+
+`ro_dt_table()` wraps `DT::datatable()` with accessible defaults (ARIA-labelled
+pagination, sensible page length). Pair it with `ro_dt_theme()` in a Shiny UI for
+consistent styling:
+
+```{r dt-example, eval=requireNamespace("DT", quietly = TRUE)}
+ro_dt_table(
+  data = head(mtcars, 20),
+  caption = "Motor Trend car road tests",
+  sorting = TRUE,
+  pagelength = 10
+)
+```
+
+In a Shiny app, add `ro_dt_theme()` alongside your `DTOutput()`:
+
+```{r shiny-example, eval=FALSE}
+library(shiny)
+
+ui <- fluidPage(
+  ro_dt_theme(sorting = TRUE),
+  DT::DTOutput("mytable")
+)
+
+server <- function(input, output, session) {
+  output$mytable <- DT::renderDT(
+    ro_dt_table(mtcars, caption = "Motor Trend car road tests", sorting = TRUE)
+  )
+}
+
+shinyApp(ui, server)
+```
