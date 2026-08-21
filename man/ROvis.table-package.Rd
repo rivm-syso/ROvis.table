@@ -6,6 +6,8 @@
 \alias{ROvis.table-package}
 \title{ROvis.table: ROvis.table is an R package that provides a comprehensive suite of utilities for visualizing in Rijksoverheid style}
 \description{
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
 Provides accessible, keyboard-navigable data tables and themed visualizations using the gt and DT packages, with RIVM styling guidelines.
 }
 \author{

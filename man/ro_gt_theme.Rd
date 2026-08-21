@@ -18,7 +18,7 @@ If Rijksoverheid font is not available on your device, Verdana will be used.}
 gt table object.
 }
 \description{
-`r ro_group_badge('gt')`
+\ifelse{html}{\figure{group-gt.svg}{options: alt='[gt]'}}{\strong{[gt]}}\cr\cr
 This function implements a stylized theme for gt tables.
 }
 \examples{
