@@ -9,7 +9,7 @@
 ## Rijksoverheid Visualisatie - table
 
 ## Description
-ROvis.table provides accessible, keyboard-navigable data tables and themed visualizations using the gt and DT packages, with RIVM styling guidelines.
+ROvis.table provides accessible, keyboard-navigable data tables and themed visualizations using the gt and DT packages, with Rijksoverheid styling guidelines.
 
 ## Installation
 
@@ -25,7 +25,7 @@ remotes::install_github("rivm-syso/ROvis.table")
 ```r
 library(ROvis.table)
 
-# Apply the RIVM-styled gt theme to a data frame
+# Apply the Rijksoverheid-styled gt theme to a data frame
 ro_gt_theme(head(mtcars, 5))
 ```
 
