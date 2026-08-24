@@ -16,7 +16,7 @@ While the package was originally developed for RIVM (and was previously called D
 
 ### 1. Open an issue
 
-**Before submitting any code changes**, please open an issue on the [GitHub issue board](TODO) to:
+**Before submitting any code changes**, please open an issue on the [GitHub issue board](https://github.com/rivm-syso/ROvis.table/issues) to:
 
 - Describe the bug you want to fix or the feature you want to add
 - Explain why the change is needed
@@ -127,7 +127,7 @@ Please avoid contributions that:
 
 If you have questions about contributing:
 
-- Open a discussion issue on [GitHub](TODO)
+- Open a discussion issue on [GitHub](https://github.com/rivm-syso/ROvis.table/issues)
 - Email the SPIN team: [spin@rivm.nl](mailto:spin@rivm.nl)
 - Review existing code and documentation in the repository to understand patterns and conventions
 
