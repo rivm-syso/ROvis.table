@@ -25,8 +25,8 @@ Suggests:
     knitr (>= 1.50),
     rmarkdown (>= 2.30),
     testthat (>= 3.0.0)
-Remotes: 
-  git@github.com:rivm-syso/ROvis.utils.git
+Remotes:
+  rivm-syso/ROvis.utils
 VignetteBuilder: quarto
 Config/testthat/edition: 3
 Encoding: UTF-8
