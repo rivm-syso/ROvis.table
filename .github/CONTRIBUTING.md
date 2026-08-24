@@ -128,7 +128,7 @@ Please avoid contributions that:
 If you have questions about contributing:
 
 - Open a discussion issue on [GitHub](TODO)
-- Email the DARA team: [dara-team-list@rivm.nl](mailto:dara-team-list@rivm.nl)
+- Email the SPIN team: [spin@rivm.nl](mailto:spin@rivm.nl)
 - Review existing code and documentation in the repository to understand patterns and conventions
 
 ## License
