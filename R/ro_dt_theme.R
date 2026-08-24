@@ -3,7 +3,7 @@
 #' @description
 #' `r ROvis.utils::ro_group_badge('DT')`
 #' Returns a Shiny tags object containing custom CSS styles for DT tables,
-#' following preliminary RIVM huisstijl.
+#' following preliminary Rijksoverheid huisstijl.
 #'
 #' @importFrom shiny tags HTML
 #' @importFrom ROvis.utils ro_check_if_font_available

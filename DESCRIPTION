@@ -1,11 +1,14 @@
 Package: ROvis.table
-Title: ROvis.table is an R package that provides a comprehensive suite of utilities for visualizing in Rijksoverheid style
+Title: Accessible Data Tables with Rijksoverheid Styling
 Version: 0.1.0
-Authors@R: person("spin@rivm.nl", email = "spin@rivm.nl", role = c("cre", "aut"))
-Description: Provides accessible, keyboard-navigable data tables and themed 
-    visualizations using the gt and DT packages, with RIVM styling guidelines.
+Authors@R: person("ROvis team", email = "spin@rivm.nl", role = c("cre", "aut"))
+Description: Provides accessible, keyboard-navigable data tables and themed
+    visualizations using the 'gt' and 'DT' packages, with Rijksoverheid styling
+    guidelines.
 License: Apache License (>= 2)
-Imports: 
+Depends:
+    R (>= 4.5.0)
+Imports:
     cli (>= 3.6.2),
     dplyr (>= 1.1.4),
     DT (>= 0.34.0),
