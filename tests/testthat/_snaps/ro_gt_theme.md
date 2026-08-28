@@ -1,7 +1,7 @@
 # ro_gt_theme works and all styling choices are working
 
     Code
-      as_raw_html(tab_header(ro_gt_theme(mtcars, groupname_col = "cyl", id = "abc"),
+      gt::as_raw_html(gt::tab_header(ro_gt_theme(mtcars, groupname_col = "cyl", id = "abc"),
       title = "mtcars", subtitle = "Open dataset from dplyr"))
     Output
       <div id="abc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">

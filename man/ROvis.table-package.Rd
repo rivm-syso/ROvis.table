@@ -4,16 +4,18 @@
 \name{ROvis.table-package}
 \alias{ROvis.table}
 \alias{ROvis.table-package}
-\title{ROvis.table: ROvis.table is an R package that provides a comprehensive suite of utilities for visualizing in Rijksoverheid style}
+\title{ROvis.table: Accessible Data Tables with Rijksoverheid Styling}
 \description{
-Provides accessible, keyboard-navigable data tables and themed visualizations using the gt and DT packages, with RIVM styling guidelines.
+\if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
+
+Provides accessible, keyboard-navigable data tables and themed visualizations using the 'gt' and 'DT' packages, with Rijksoverheid styling guidelines.
 }
 \author{
-\strong{Maintainer}: spin@rivm.nl \email{spin@rivm.nl}
+\strong{Maintainer}: ROvis team \email{spin@rivm.nl}
 
 Authors:
 \itemize{
-  \item spin@rivm.nl \email{spin@rivm.nl}
+  \item ROvis team \email{spin@rivm.nl}
 }
 
 }
