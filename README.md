@@ -9,7 +9,7 @@
 ## Rijksoverheid Visualisatie - table
 
 ## Description
-ROvis.table provides accessible, keyboard-navigable data tables and themed visualizations using the gt and DT packages, with Rijksoverheid styling guidelines.
+A tool to uniformly present tables using standardized Rijksoverheid (Dutch National Government) styling. This package is part of the [ROvis umbrella package] (https://github.com/rivm-syso/ROvis).
 
 ## Installation
 
@@ -30,18 +30,17 @@ ro_gt_theme(head(mtcars, 5))
 ```
 
 ## Support
-First point of contact for questions: SPIN team (spin@rivm.nl)
-
-## Roadmap
-*If you have ideas for releases in the future, it is a good idea to list them in the README.*
+First point of contact for questions: ROvis team (spin@rivm.nl)
 
 ## Contributing
-See [CONTRIBUTING.md](.github/CONTRIBUTING.md) for guidelines on how to contribute, and [CONTRIBUTORS.md](CONTRIBUTORS.md) for the list of contributors.
+We welcome contributions and are always happy to see people help improve this package.
+If you would like to contribute, please first open an issue to describe the bug, feature, or proposed change. Once you are ready, submit a pull request linked to that issue.
+All contributions will be reviewed by the SPIN team before they are merged.
 
 ## Instructions for developers 
 
-Below we describe the most important guidelines and practicalities for R package
-development on this project.
+For information about R package development, check the [R Packages book](https://r-pkgs.org/). 
+Below we describe the most important guidelines and practicalities.
 
 
 ### Requirements
@@ -73,7 +72,7 @@ the `min_version` argument to specify a minimum version.
 create automatic documentation in the `man` folder
 
 ## Authors and acknowledgment
-This R package was created by the SPIN team (spin@rivm.nl).
+This R package was created by the ROvis team (spin@rivm.nl).
 
 ## License
-This package is licensed under the Apache License 2.0. See [LICENSE.md](LICENSE.md) for details.
+This package uses an Apache license.
