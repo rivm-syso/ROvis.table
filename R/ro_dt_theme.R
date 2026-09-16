@@ -35,7 +35,7 @@ ro_dt_theme <- function(
   sorting = FALSE
 ) {
   check_string(base_family)
-  base_family <- ro_check_if_font_available(base_family = base_family)
+  base_family <- ro_check_if_font_available(target_font_family = base_family)
 
   if (sorting) {
     header_align <- "left"

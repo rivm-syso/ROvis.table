@@ -1,6 +1,6 @@
 test_that("ro_dt_theme applies the font resolved by ro_check_if_font_available", {
   local_mocked_bindings(
-    ro_check_if_font_available = function(base_family) "Verdana"
+    ro_check_if_font_available = function(target_font_family) "Verdana"
   )
   css <- ro_dt_theme()$children[[1]]$children[[1]]
   expect_true(grepl("Verdana", css, fixed = TRUE))
