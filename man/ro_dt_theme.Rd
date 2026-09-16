@@ -7,7 +7,9 @@
 ro_dt_theme(base_family = "RijksoverheidSansWebText", sorting = FALSE)
 }
 \arguments{
-\item{base_family}{Character. Font family to use for table text. Default is "Arial".}
+\item{base_family}{Character. Font family to use for table text. Default is
+"RijksoverheidSansWebText". If not installed, Verdana is used, then Arial,
+then the first font found on your device, whichever is installed first.}
 
 \item{sorting}{Logical. If \code{TRUE}, column headers are left-aligned;
 if \code{FALSE}, right-aligned. Default is \code{FALSE}.}
@@ -24,7 +26,7 @@ following preliminary Rijksoverheid huisstijl.
 \examples{
 if (interactive()) {
   ui <- fluidPage(
-    ro_dt_theme(base_family = "Arial", sorting = FALSE),
+    ro_dt_theme(sorting = FALSE),
     DTOutput("mytable")
   )
   server <- function(input, output, session) {

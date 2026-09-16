@@ -35,4 +35,3 @@ importFrom(shiny,
   HTML,
   tags
 )
-importFrom(systemfonts,system_fonts)

@@ -16,7 +16,6 @@ Imports:
     magrittr (>= 2.0.3),
     rlang (>= 1.1.0),
     shiny (>= 1.14.0),
-    systemfonts (>= 1.3.1),
     ROvis.utils
 Suggests: 
     covr (>= 3.6.4),

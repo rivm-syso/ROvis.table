@@ -7,12 +7,13 @@
 #' @importFrom gt gt tab_options cols_align sub_missing opt_row_striping
 #'   tab_style cells_title cell_text cells_column_labels cells_row_groups
 #'   cells_body everything where px
-#' @importFrom systemfonts system_fonts
+#' @importFrom ROvis.utils ro_check_if_font_available
 #' @importFrom ROvis.utils ro_color
 #'
 #' @param df  Dataframe.
 #' @param ROfont Default is FALSE, will change to TRUE for next major release (1.0.0).
-#'  If Rijksoverheid font is not available on your device, Verdana will be used.
+#'  If Rijksoverheid font is not available on your device, Verdana is used, then Arial,
+#'  then the first font found on your device, whichever is installed first.
 #' @param ... For internal use. Leave empty.
 #' @family gt
 #' @return gt table object.
@@ -27,13 +28,15 @@ ro_gt_theme <- function(df, ROfont = FALSE, ...) {
   check_data_frame(df)
   check_bool(ROfont)
 
-  if (
-    ROfont &&
-      "RijksoverheidSansWebText" %in% system_fonts()$family
-  ) {
-    font <- "RijksoverheidSansWebText"
+  # RO font usage is opt-in until it becomes the default in the next major
+  # release (1.0.0), so don't surface RO-font-specific messaging until then.
+  if (ROfont) {
+    font <- ro_check_if_font_available("RijksoverheidSansWebText")
   } else {
-    font <- "Verdana"
+    font <- suppressMessages(ro_check_if_font_available("RijksoverheidSansWebText"))
+    if (identical(font, "RijksoverheidSansWebText")) {
+      font <- "Verdana"
+    }
   }
 
   gt(df, ...) |>

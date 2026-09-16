@@ -8,7 +8,9 @@
 #' @importFrom shiny tags HTML
 #' @importFrom ROvis.utils ro_check_if_font_available
 #'
-#' @param base_family Character. Font family to use for table text. Default is "Arial".
+#' @param base_family Character. Font family to use for table text. Default is
+#'   "RijksoverheidSansWebText". If not installed, Verdana is used, then Arial,
+#'   then the first font found on your device, whichever is installed first.
 #' @param sorting Logical. If \code{TRUE}, column headers are left-aligned;
 #'   if \code{FALSE}, right-aligned. Default is \code{FALSE}.
 #'
@@ -19,7 +21,7 @@
 #' @examples
 #' if (interactive()) {
 #'   ui <- fluidPage(
-#'     ro_dt_theme(base_family = "Arial", sorting = FALSE),
+#'     ro_dt_theme(sorting = FALSE),
 #'     DTOutput("mytable")
 #'   )
 #'   server <- function(input, output, session) {
@@ -33,7 +35,7 @@ ro_dt_theme <- function(
   sorting = FALSE
 ) {
   check_string(base_family)
-  ro_check_if_font_available(base_family = base_family)
+  base_family <- ro_check_if_font_available(target_font_family = base_family)
 
   if (sorting) {
     header_align <- "left"

@@ -10,7 +10,8 @@ ro_gt_theme(df, ROfont = FALSE, ...)
 \item{df}{Dataframe.}
 
 \item{ROfont}{Default is FALSE, will change to TRUE for next major release (1.0.0).
-If Rijksoverheid font is not available on your device, Verdana will be used.}
+If Rijksoverheid font is not available on your device, Verdana is used, then Arial,
+then the first font found on your device, whichever is installed first.}
 
 \item{...}{For internal use. Leave empty.}
 }
