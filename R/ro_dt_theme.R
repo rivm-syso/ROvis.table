@@ -11,7 +11,7 @@
 #' @param base_family Character. Font family to use for table text. Default is
 #'   "RijksoverheidSansWebText". If not installed, Verdana is used, then Arial,
 #'   then the first font found on your device, whichever is installed first.
-#' @param sorting Logical. If \code{TRUE}, column headers are left-aligned;
+#' @param sorting Logical. If \code{TRUE}, column headers are moved, to make space for arrows.
 #'   if \code{FALSE}, right-aligned. Default is \code{FALSE}.
 #'
 #' @return A \code{shiny.tags} object with a \code{<head>} tag containing
@@ -25,7 +25,7 @@
 #'     DTOutput("mytable")
 #'   )
 #'   server <- function(input, output, session) {
-#'     output$mytable <- renderDT(datatable(iris, options(list(ordering=FALSE))))
+#'     output$mytable <- renderDT(datatable(iris, rownames = FALSE, options(list(ordering=FALSE))))
 #'   }
 #'   shinyApp(ui, server)
 #' }
@@ -38,9 +38,9 @@ ro_dt_theme <- function(
   base_family <- ro_check_if_font_available(target_font_family = base_family)
 
   if (sorting) {
-    header_align <- "left"
+    header_align <- 25
   } else {
-    header_align <- "right"
+    header_align <- 3
   }
 
   tags$head(
@@ -79,8 +79,8 @@ ro_dt_theme <- function(
             font-weight: normal !important;
             font-style: normal;
             font-size: 13px;
-            text-align: %s !important;
-            padding: 1px 3px !important;
+            text-align: right !important;
+            padding: 1px %dpx 1px 3px !important;
             border-bottom: 2px solid #222222 !important;
             border-left: none !important;
             border-right: none !important;
@@ -135,6 +135,44 @@ ro_dt_theme <- function(
           table.dataTable thead .sorting:after {
             color: #535353 !important;
             opacity: 1 !important;
+          }
+
+          /* Hide default arrows */
+          table.dataTable thead .sorting:after,
+          table.dataTable thead .sorting_asc:after,
+          table.dataTable thead .sorting_desc:after {
+            content: \"\" !important;
+          }
+
+          /* Base style for all custom arrows */
+          table.dataTable thead th.sorting:before,
+          table.dataTable thead th.sorting_asc:before,
+          table.dataTable thead th.sorting_desc:before {
+            display: inline-block;
+            font-size: 16px !important;
+            line-height: 1px !important;
+            vertical-align: bottom;
+            margin-left: 4px;
+          }
+
+          /* Unsorted: neutral arrow */
+          table.dataTable thead .sorting:before {
+            content: '\\2195' !important;
+            color: #888888 !important;
+          }
+
+          /* Ascending: up arrow */
+          table.dataTable thead .sorting_asc:before {
+            content: '\\2191' !important;
+            color: #007bff !important;
+            font-weight: 700 !important;
+          }
+
+          /* Descending: down arrow */
+          table.dataTable thead .sorting_desc:before {
+            content: '\\2193' !important;
+            color:  #007bff !important;
+            font-weight: 700 !important;
           }
 
           /* Pagination: button borders */
