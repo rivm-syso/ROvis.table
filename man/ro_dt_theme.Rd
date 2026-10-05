@@ -11,7 +11,7 @@ ro_dt_theme(base_family = "RijksoverheidSansWebText", sorting = FALSE)
 "RijksoverheidSansWebText". If not installed, Verdana is used, then Arial,
 then the first font found on your device, whichever is installed first.}
 
-\item{sorting}{Logical. If \code{TRUE}, column headers are left-aligned;
+\item{sorting}{Logical. If \code{TRUE}, column headers are moved, to make space for arrows.
 if \code{FALSE}, right-aligned. Default is \code{FALSE}.}
 }
 \value{
@@ -30,7 +30,7 @@ if (interactive()) {
     DTOutput("mytable")
   )
   server <- function(input, output, session) {
-    output$mytable <- renderDT(datatable(iris, options(list(ordering=FALSE))))
+    output$mytable <- renderDT(datatable(iris, rownames = FALSE, options(list(ordering=FALSE))))
   }
   shinyApp(ui, server)
 }
