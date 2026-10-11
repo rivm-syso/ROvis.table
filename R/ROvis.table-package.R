@@ -9,6 +9,7 @@
 #' @importFrom magrittr %>%
 #' @importFrom DT datatable
 #' @importFrom gt gt
+#' @importFrom reactable reactable
 #' @importFrom ROvis.utils ro_check_if_font_available
 ## usethis namespace: end
 NULL
