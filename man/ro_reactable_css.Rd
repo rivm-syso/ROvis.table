@@ -4,7 +4,7 @@
 \alias{ro_reactable_css}
 \title{Custom CSS for reactable tables}
 \usage{
-ro_reactable_css(sorting = TRUE)
+ro_reactable_css(sorting = FALSE)
 }
 \arguments{
 \item{sorting}{Logical. If \code{TRUE}, custom sorting arrows are shown in the
@@ -21,25 +21,67 @@ with table styling according to the Rijksoverheid huisstijl.
 }
 \examples{
 if (interactive()) {
-  library(shiny)
-  library(reactable)
+library(shiny)
+library(reactable)
 
-  ui <- fluidPage(
-    ro_reactable_css(sorting = TRUE),
-    reactableOutput("mytable")
-  )
+ui <- tagList(
+  tags$html(
+    lang = "en",
+    tags$head(
+      tags$title("Reactable table")
+    ),
+    tags$body(
+      fluidPage(
 
-  server <- function(input, output, session) {
-    output$mytable <- renderReactable(
-      reactable(
-        iris,
-        defaultColDef = colDef(align = "right", sortable = TRUE),
-        theme = ro_reactable_theme(sorting = TRUE)
+        # Apply the custom reactable CSS theme
+        ro_reactable_css(sorting = FALSE),
+
+        tags$div(
+          id = "table-title",
+          role = "heading",
+          "Description title of the table"
+       ),
+
+        tags$div(
+         id = "table-info",
+          class = "sr-only",
+          textOutput("table_info")
+        ),
+
+        tags$div(
+          id = "table-wrapper",
+          role = "table",
+          `aria-labelledby` = "table-title",
+          `aria-describedby` = "table-info",
+          reactableOutput("mytable")
+        )
       )
     )
-  }
+  )
+)
 
-  shinyApp(ui, server)
+server <- function(input, output, session) {
+
+  # data
+  data <- iris
+
+  # Description for screen readers
+  output$table_info <- renderText({
+    paste("Table with ", nrow(data), "rows and ", ncol(data), "columns.")
+  })
+
+  # Render the reactable table
+  output$mytable <- renderReactable(
+    reactable(
+      data,
+      defaultColDef = colDef(align = "right", sortable = FALSE),
+      theme = ro_reactable_theme(sorting = FALSE)
+    )
+  )
+
+}
+
+shinyApp(ui, server)
 }
 }
 \seealso{
