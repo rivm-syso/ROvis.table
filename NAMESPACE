@@ -3,6 +3,8 @@
 export(ro_dt_table)
 export(ro_dt_theme)
 export(ro_gt_theme)
+export(ro_reactable_css)
+export(ro_reactable_theme)
 import(rlang)
 importFrom(DT,
   JS,
@@ -31,6 +33,7 @@ importFrom(gt,
   where
 )
 importFrom(magrittr,"%>%")
+importFrom(reactable,reactable)
 importFrom(shiny,
   HTML,
   tags
