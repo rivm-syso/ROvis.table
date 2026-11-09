@@ -50,6 +50,24 @@ ro_dt_table <- function(data, caption, sorting = FALSE, pagelength = 10) {
     ),
     callback = JS(
       "
+          // Inject screen-reader-only style once (not dependent on host Bootstrap version)
+          if (!document.getElementById('ro-dt-table-visually-hidden-style')) {
+            var style = document.createElement('style');
+            style.id = 'ro-dt-table-visually-hidden-style';
+            style.innerHTML = '.visually-hidden {' +
+              'position: absolute !important;' +
+              'width: 1px !important;' +
+              'height: 1px !important;' +
+              'padding: 0 !important;' +
+              'margin: -1px !important;' +
+              'overflow: hidden !important;' +
+              'clip: rect(0, 0, 0, 0) !important;' +
+              'white-space: nowrap !important;' +
+              'border: 0 !important;' +
+            '}';
+            document.head.appendChild(style);
+          }
+
           // Add ARIA role and label to pagination
           function addPaginationARIA() {
             var $container = $(table.table().container());
