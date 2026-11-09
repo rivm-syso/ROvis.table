@@ -164,14 +164,14 @@ ro_dt_theme <- function(
           /* Ascending: up arrow */
           table.dataTable thead .sorting_asc:before {
             content: '\\2191' !important;
-            color: #007bff !important;
+            color: #44688f !important;
             font-weight: 700 !important;
           }
 
           /* Descending: down arrow */
           table.dataTable thead .sorting_desc:before {
             content: '\\2193' !important;
-            color:  #007bff !important;
+            color: #44688f !important;
             font-weight: 700 !important;
           }
 
