@@ -1,4 +1,6 @@
-# ROvis.table v0.1.0
+# ROvis.table (development version)
+
+# ROvis.table 0.1.0
 
 First release since `ROvis.table` was split out of the `ROvis` monolith into its own
 package, and the repository moved from GitLab to GitHub.
