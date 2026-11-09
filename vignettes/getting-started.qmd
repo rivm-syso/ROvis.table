@@ -16,7 +16,7 @@ ROvis.table provides two ways to build accessible, Rijksoverheid-styled tables:
 interactive, keyboard-navigable `DT` tables.
 
 ```{r libraries, message=FALSE}
-library(ROvis.table)
+library(ROvis.table) # nolint: missing_package_linter
 ```
 
 ## Static tables with gt
