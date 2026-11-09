@@ -7,7 +7,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/rivm-syso/ROvis.table/blob/v0.1.0/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/rivm-syso/ROvis.table/blob/main/DESCRIPTION)
 
 ROvis team (2026). *ROvis.table: Accessible Data Tables with
 Rijksoverheid Styling*. R package version 0.1.0,
