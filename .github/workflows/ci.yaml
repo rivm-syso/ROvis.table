@@ -49,7 +49,7 @@ jobs:
       # R is already baked into daratools/robase - no setup-r needed.
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: any::lintr
+          extra-packages: any::lintr, local::.
           needs: lint
 
       # Deliberately doesn't use LINTR_ERROR_ON_LINT here: we need the lint
