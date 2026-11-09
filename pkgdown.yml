@@ -1,0 +1,9 @@
+pandoc: 3.8.3
+pkgdown: 2.2.0
+pkgdown_sha: ~
+articles:
+  getting-started: getting-started.html
+last_built: 2026-11-09T13:36Z
+urls:
+  reference: https://rivm-syso.github.io/ROvis.table/reference
+  article: https://rivm-syso.github.io/ROvis.table/articles
