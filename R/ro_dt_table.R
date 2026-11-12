@@ -41,10 +41,12 @@ ro_dt_table <- function(data, caption, sorting = FALSE, pagelength = 10) {
       pageLength = pagelength,
       language = list(
         paginate = list(
-          first = "Eerste pagina",
-          previous = "Vorige pagina",
-          `next` = "Volgende pagina",
-          last = "Laatste pagina"
+          previous = "Previous page",
+          `next` = "Next page"
+        ),
+        aria = list(
+          sortAscending  = "",
+          sortDescending = ""
         )
       )
     ),
@@ -58,22 +60,6 @@ ro_dt_table <- function(data, caption, sorting = FALSE, pagelength = 10) {
             // Add role and aria-label to pagination
             $paginate.attr('role', 'navigation');
             $paginate.attr('aria-label', 'Paginering');
-          }
-
-          // Add Pagina to the page numbers of the table
-          function addPaginationLabels() {
-            var $pagBtns = $(table.table().container()).find('.dataTables_paginate .paginate_button');
-            $pagBtns.each(function(){
-              var $btn = $(this);
-              var txt = $btn.text().trim();
-              if(/^[0-9]+$/.test(txt)) {
-                // Voeg een visueel verborgen span toe als die nog niet bestaat
-                if ($btn.find('.visually-hidden').length === 0) {
-                  $btn.append('<span class=\"visually-hidden\">Pagina </span>');
-                }
-                $btn.attr('aria-label', 'Pagina ' + txt);
-              }
-            });
           }
 
           table.on('draw', function() {
